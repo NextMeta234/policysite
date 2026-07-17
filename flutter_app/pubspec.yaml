@@ -1,0 +1,52 @@
+name: nextmeta_policy
+description: NextMeta ポリシーアプリ - プライバシーポリシーと利用規約を表示するFlutterアプリ
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # WebView
+  webview_flutter: ^4.2.0
+  
+  # UI/UX
+  cupertino_icons: ^1.0.2
+  google_fonts: ^6.1.0
+  
+  # State Management
+  provider: ^6.0.0
+  
+  # Navigation
+  go_router: ^11.0.0
+  
+  # HTTP
+  http: ^1.1.0
+  
+  # Storage
+  shared_preferences: ^2.2.0
+  
+  # Logging
+  logger: ^2.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Uncomment and add custom fonts
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: assets/fonts/CustomFont-Regular.ttf
+  #       - asset: assets/fonts/CustomFont-Bold.ttf
+  #         weight: 700
