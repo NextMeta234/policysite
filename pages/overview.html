@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポリシーの概要 - NextMeta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .overview-hero {
+            background: linear-gradient(135deg, #1f2937 0%, #4b5563 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .overview-hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .overview-hero p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .overview-main-content {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 40px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .overview-content {
+            flex: 1;
+        }
+
+        .overview-sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .policy-card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            transform: translateX(4px);
+        }
+
+        .policy-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .policy-card p {
+            font-size: 0.95em;
+            color: #6b7280;
+            margin-bottom: 0;
+        }
+
+        .overview-section {
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .overview-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+
+        .overview-section h3 {
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #374151;
+        }
+
+        .overview-section p {
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .feature-item h4 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.95em;
+            color: #6b7280;
+            margin-bottom: 0;
+        }
+
+        .quick-links {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .quick-links h3 {
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        .quick-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links li {
+            margin-bottom: 10px;
+        }
+
+        .quick-links a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .overview-main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-sidebar {
+                position: static;
+            }
+
+            .overview-hero h1 {
+                font-size: 1.8em;
+            }
+
+            .overview-section {
+                padding: 25px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <section class="overview-hero">
+            <h1>ポリシーの概要</h1>
+            <p>NextMetaのプライバシーと利用に関する基本情報をご紹介します</p>
+        </section>
+
+        <!-- メインコンテンツ -->
+        <div class="overview-main-content">
+            <!-- メインコンテンツエリア -->
+            <main class="overview-content">
+                <!-- 概要セクション -->
+                <section class="overview-section">
+                    <h2>NextMetaについて</h2>
+                    <p>
+                        NextMetaは、ユーザーのプライバシーとセキュリティを最優先に考えるサービスです。
+                        私たちは、ユーザーデータを適切に保護し、透明性を持って運営することを約束しています。
+                    </p>
+                    <p>
+                        このページでは、私たちのポリシーの基本的な内容をわかりやすく説明しています。
+                        詳細については、各ポリシーページをご覧ください。
+                    </p>
+                </section>
+
+                <!-- プライバシー保護 -->
+                <section class="overview-section">
+                    <h2>🔒 プライバシー保護</h2>
+                    
+                    <h3>データ収集について</h3>
+                    <p>
+                        私たちは、サービス提供に必要な情報のみを収集します。
+                        ユーザーの同意なしに個人情報を第三者と共有することはありません。
+                    </p>
+
+                    <div class="highlight-box">
+                        <strong>重要：</strong> あなたのプライバシーはあなたのものです。
+                        私たちはそれを尊重し、保護します。
+                    </div>
+
+                    <h3>セキュリティ対策</h3>
+                    <p>
+                        最新の暗号化技術とセキュリティ対策を実施しています：
+                    </p>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>🔐 暗号化</h4>
+                            <p>SSL/TLS暗号化でデータを保護</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🛡️ ファイアウォール</h4>
+                            <p>高度なセキュリティシステム</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🔍 監査</h4>
+                            <p>定期的なセキュリティ監査</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>👥 アクセス制御</h4>
+                            <p>厳密なアクセス管理</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 利用規約 -->
+                <section class="overview-section">
+                    <h2>📋 利用規約</h2>
+                    
+                    <h3>基本ルール</h3>
+                    <p>
+                        NextMetaを安全で快適な環境として維持するため、すべてのユーザーに
+                        従うべきルールがあります。
+                    </p>
+
+                    <h3>禁止事項</h3>
+                    <p>以下のような行為は禁止されています：</p>
+                    <ul>
+                        <li>違法または有害なコンテンツの投稿</li>
+                        <li>他のユーザーのプライバシーや知的財産権の侵害</li>
+                        <li>スパムやマルウェア配信</li>
+                        <li>サービスへの不正なアクセス</li>
+                    </ul>
+
+                    <h3>アカウント責任</h3>
+                    <p>
+                        ユーザーは自分のアカウントで行われるすべての活動について責任を持ちます。
+                        アカウント情報の管理と保護はユーザーの責任です。
+                    </p>
+                </section>
+
+                <!-- あなたの権利 -->
+                <section class="overview-section">
+                    <h2>⚖️ あなたの権利</h2>
+                    
+                    <p>NextMetaでは、ユーザーの以下の権利を保障しています：</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>📖 アクセス権</h4>
+                            <p>自分の個人情報にアクセスできます</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>✏️ 修正権</h4>
+                            <p>不正確な情報を訂正できます</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🗑️ 削除権</h4>
+                            <p>情報の削除をリクエストできます</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🚫 抗議権</h4>
+                            <p>データ処理に異議を唱えられます</p>
+                        </div>
+                    </div>
+
+                    <h3>データポータビリティ</h3>
+                    <p>
+                        自分のデータを別のサービスに移行したい場合は、
+                        リクエストしていただくことで対応します。
+                    </p>
+                </section>
+
+                <!-- Cookie -->
+                <section class="overview-section">
+                    <h2>🍪 Cookieについて</h2>
+                    
+                    <p>
+                        当サイトはCookieを使用してユーザー体験を向上させます。
+                        Cookieには3つのタイプがあります：
+                    </p>
+
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <h4>必須Cookie</h4>
+                            <p>サイトの正常な動作に必要</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>分析Cookie</h4>
+                            <p>利用パターンの分析に使用</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>マーケティングCookie</h4>
+                            <p>パーソナライズされたコンテンツ提供</p>
+                        </div>
+                    </div>
+
+                    <p>
+                        ブラウザ設定からCookie設定を変更できます。
+                        ただし、一部機能が制限される可能性があります。
+                    </p>
+                </section>
+
+                <!-- 変更について -->
+                <section class="overview-section">
+                    <h2>📝 ポリシーの変更</h2>
+                    
+                    <p>
+                        私たちは、法律の変更やサービスの改善に伴い、
+                        ポリシーを更新する場合があります。
+                    </p>
+
+                    <h3>重大な変更の場合</h3>
+                    <p>
+                        プライバシーポリシーや利用規約に重大な変更がある場合は、
+                        事前にメールでお知らせします。
+                    </p>
+
+                    <h3>軽微な更新の場合</h3>
+                    <p>
+                        軽微な変更は、このページで直接適用されます。
+                        定期的にご確認ください。
+                    </p>
+                </section>
+
+                <!-- よくある質問 -->
+                <section class="overview-section">
+                    <h2>❓ よくある質問</h2>
+                    
+                    <h3>Q: 自分のデータはどのように保護されていますか？</h3>
+                    <p>
+                        最新の暗号化技術、ファイアウォール、定期的なセキュリティ監査により
+                        保護されています。
+                    </p>
+
+                    <h3>Q: 個人情報は第三者と共有されますか？</h3>
+                    <p>
+                        明示的な同意がない限り、個人情報を第三者と共有することはありません。
+                        サービス提供に必要な信頼できるパートナーとのみ共有します。
+                    </p>
+
+                    <h3>Q: アカウントを削除した場合、データは完全に削除されますか？</h3>
+                    <p>
+                        法的保持期間の範囲内で、アカウント削除後にデータは削除されます。
+                        詳細はお問い合わせください。
+                    </p>
+
+                    <h3>Q: ポリシーの変更があったときはどのように通知されますか？</h3>
+                    <p>
+                        重大な変更はメールで通知します。
+                        軽微な変更はこのページで案内されます。
+                    </p>
+                </section>
+
+                <!-- お問い合わせ -->
+                <section class="overview-section">
+                    <h2>📧 お問い合わせ</h2>
+                    
+                    <p>
+                        ポリシーについてご質問やご懸念がある場合は、
+                        以下の方法でお気軽にお問い合わせください。
+                    </p>
+
+                    <div class="highlight-box">
+                        <p style="margin-bottom: 10px;">
+                            <strong>メール：</strong> support@example.com
+                        </p>
+                        <p style="margin-bottom: 10px;">
+                            <strong>営業時間：</strong> 平日 10:00 - 18:00 (日本時間)
+                        </p>
+                        <p style="margin-bottom: 0;">
+                            <strong>返答期間：</strong> 通常30日以内
+                        </p>
+                    </div>
+                </section>
+            </main>
+
+            <!-- サイドバー -->
+            <aside class="overview-sidebar">
+                <div class="quick-links">
+                    <h3>📚 ポリシー</h3>
+                    <ul>
+                        <li><a href="privacy.html">プライバシーポリシー</a></li>
+                        <li><a href="terms.html">利用規約</a></li>
+                        <li><a href="overview.html">概要 (このページ)</a></li>
+                    </ul>
+                </div>
+
+                <a href="privacy.html" class="policy-card">
+                    <h3>🔒 プライバシー</h3>
+                    <p>個人情報の取り扱いについて詳しく知る</p>
+                </a>
+
+                <a href="terms.html" class="policy-card">
+                    <h3>📋 利用規約</h3>
+                    <p>サービス利用のルール詳細</p>
+                </a>
+
+                <div class="policy-card" style="border-left-color: #10b981; cursor: default;">
+                    <h3>💡 ヒント</h3>
+                    <p>定期的にポリシーをご確認ください。大切な情報が含まれています。</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 NextMeta. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="../index.html">ホーム</a> | 
+                    <a href="overview.html">概要</a> | 
+                    <a href="privacy.html">プライバシーポリシー</a> | 
+                    <a href="terms.html">利用規約</a> | 
+                    <a href="#">お問い合わせ</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
