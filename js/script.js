@@ -97,3 +97,41 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('load', () => {
     console.log('Privacy Policy page loaded successfully');
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("cookie-accept");
+  const declineBtn = document.getElementById("cookie-decline");
+  
+  // HTML内にある「Cookie設定」のリンクを探す
+  const cookieLink = document.querySelector('a[href="#cookie-settings"]') || document.querySelector('a[href="#"]');
+
+  // 1. ページ読み込み時の処理
+  const cookieConsent = localStorage.getItem("cookieConsent");
+  if (!cookieConsent) {
+    // 同意履歴がなければ、クラスを付与してフワッと表示
+    setTimeout(() => {
+      cookieBanner.classList.add("show");
+    }, 500); // 0.5秒後に表示
+  }
+
+  // 2. 「Cookie設定」リンクを押した時の処理
+  if (cookieLink) {
+    cookieLink.addEventListener("click", function (e) {
+      e.preventDefault(); // 画面がトップに跳ね上がるのを防ぐ
+      cookieBanner.classList.add("show"); // バナーを再表示
+    });
+  }
+
+  // 3. 「同意する」ボタン
+  acceptBtn.addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "accepted");
+    cookieBanner.classList.remove("show");
+  });
+
+  // 4. 「同意しない」ボタン
+  declineBtn.addEventListener("click", function () {
+    localStorage.setItem("cookieConsent", "declined");
+    cookieBanner.classList.remove("show");
+  });
+});
