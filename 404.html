@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Error 404 (Not Found)!!1 </title>
+  <title>Error 404 (Not Found)!!1</title>
 
-  <!-- JPEGファビコンのURLを指定 -->
   <link rel="icon" href="https://cdn.01.next-meta-cloud.com/fav/IMG_0611.jpeg" type="image/jpeg">
 
   <style>
-    /* 全体のレイアウト設定 */
     html, body {
       height: 100%;
       margin: 0;
@@ -19,42 +17,39 @@
       color: #222;
     }
 
-    /* 
-  
-    */
     .main-container {
       position: absolute;
-      top: 15%; 
-      
-      
+      top: 15%;
       left: 50%;
-      
-      /* 
-
-      */
-      transform: translateX(-25%);
-      
-      width: 90%;    
-      max-width: 600px;   
-      text-align: left; 
-      display: inline-block;
+      transform: translateX(-35%);
+      width: 90%;
+      max-width: 600px;
+      text-align: left;
     }
-
 
     .brand-logo {
       font-size: 60px;
       font-weight: bold;
       color: #000;
-      margin-bottom: 25px; 
+      text-decoration: none;
+      margin-bottom: 20px;
       letter-spacing: -2px;
-      display: block;
+      display: inline-block;
     }
 
+    .brand-logo:hover {
+      text-decoration: underline;
+    }
+
+    .error-text {
+      max-width: 350px;
+      float: left;
+    }
 
     p {
       margin: 11px 0 22px;
       overflow: hidden;
-      max-width: 390px; 
+      line-height: 1.4;
     }
     ins {
       color: #777;
@@ -64,35 +59,39 @@
       color: #000;
     }
 
-    /* 
-
-    */
-    /*
-    .error-robot {
-      position: absolute;
-      right: 0;
-      top: 0;
-      max-width: 200px;
+    .robot-img {
+      float: right;
+      margin-top: -30px;
+      width: 180px;
+      height: auto;
     }
-    */
+
+    @media (max-width: 600px) {
+      .main-container {
+        left: 5%;
+        transform: none;
+      }
+      .robot-img {
+        float: none;
+        display: block;
+        margin-top: 20px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- コンテンツ全体を包むコンテナを追加 -->
   <div class="main-container">
-    
-    <!-- 最上部のでかい文字 -->
-    <span class="brand-logo">NextMeta</span>
+    <a href="https://policies.next-meta.com" class="brand-logo">NextMeta</a>
+    <img class="robot-img" src="https://www.google.com/images/errors/robot.png" alt="Robot error">
 
-    <!-- エラー本文 -->
-    <p><b>404.</b> <ins>That’s an error.</ins></p>
-    <p>The requested URL <strong id="invalid-path"></strong> was not found on this server. <ins>That’s all we know.</ins></p>
-
+    <div class="error-text">
+      <p><b>404.</b> <ins>That’s an error.</ins></p>
+      <p>The requested URL <strong id="invalid-path"></strong> was not found on this server. <ins>That’s all we know.</ins></p>
+    </div>
   </div>
 
   <script>
-    // 開こうとしたURLのパスを取得して埋め込む
     document.getElementById('invalid-path').textContent = window.location.pathname;
   </script>
 </body>
