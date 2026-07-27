@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Error 404 (Not Found)!!1</title>
+  <title>Error 404 (Not Found)!!1 </title>
+
+  <!-- ★JPEG画像のURLを指定 -->
+  <link rel="icon" href="https://cdn.01.next-meta-cloud.com/fav/IMG_0611.jpeg" type="image/jpeg">
+
   <style>
+    /* 全体のレイアウト */
     body {
       font-family: arial, sans-serif;
       color: #222;
       background: #fff;
       margin: 7% auto 0;
-      max-width: 390px;
+      max-width: 450px;
       min-height: 180px;
-      padding: 30px 0 15px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    /* 「NextMeta」の文字 */
+    .brand-logo {
+      font-size: 60px;
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 30px;
+      letter-spacing: -2px;
+      display: block;
+    }
+
+    /* エラーメッセージ（Google風） */
+    .error-msg {
+      text-align: left;
+      display: inline-block;
+      max-width: 390px;
     }
     p {
       margin: 11px 0 22px;
@@ -28,11 +51,17 @@
   </style>
 </head>
 <body>
-  <p><b>404.</b> <ins>That’s an error.</ins></p>
-  <p>The requested URL <strong id="invalid-path"></strong> was not found on this server. <ins>That’s all we know.</ins></p>
+
+  <!-- 最上部のでかい文字 -->
+  <span class="brand-logo">NextMeta</span>
+
+  <!-- エラー本文 -->
+  <div class="error-msg">
+    <p><b>404.</b> <ins>That’s an error.</ins></p>
+    <p>The requested URL <strong id="invalid-path"></strong> was not found on this server. <ins>That’s all we know.</ins></p>
+  </div>
 
   <script>
-    // 開こうとしたURLのパス（例: /aaaa）を取得して <strong> タグに埋め込む
     document.getElementById('invalid-path').textContent = window.location.pathname;
   </script>
 </body>
